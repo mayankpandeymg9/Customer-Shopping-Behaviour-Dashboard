@@ -45,3 +45,50 @@ limit 5
 
 --Q7. Segment customers into New, Returning, and Loyal based on their total 
 -- number of previous purchases, and show the count of each segment. 
+with customer_type as (
+select customer_id, previous_purchases,
+case 
+when previous_purchases = 1 then 'new'
+when previous_purchases between 2 and 10 then 'returning'
+else 'loyal'
+end as customer_segment
+from customer
+)
+
+select customer_segment, count(*) as "Number of customers"
+from customer_type
+group by customer_segment
+
+--Q8. What are the top 3 most purchased products within each category? 
+---***advance query***
+
+with item_counts as (
+select category,
+item_purchased,
+count(customer_id) as total_orders,
+row_number() over(partition by category order by count(customer_id) desc) as item_rank
+from customer
+group by category, item_purchased
+)
+
+select item_rank, category, item_purchased, total_orders
+from item_counts
+
+
+--Q9. Are customers who are repeat buyers (more than 5 previous purchases) also likely to subscribe?
+
+select subscription_status,
+count(customer_id) as repeat_buyers
+from customer
+where previous_purchases > 5
+group by subscription_status
+
+
+--Q10. What is the revenue contribution of each age group? 
+select age_group,
+sum(purchase_amount) as total_revenue
+from customer 
+group by age_group
+order by total_revenue desc
+
+
