@@ -234,7 +234,7 @@ The SQL script contains queries designed to investigate questions such as:
 The Power BI report is included in the repository:
 
 [`Customer_behaviour_dashboard.pbix`](./Customer_behaviour_dashboard.pbix)
-(![Customer Shopping Behaviour Dashboard](/assets/dashboard-overview.png))
+![Customer Shopping Behaviour Dashboard](/assets/dashboard-overview.png)
 
 ## 🧠 Skills Demonstrated
 
