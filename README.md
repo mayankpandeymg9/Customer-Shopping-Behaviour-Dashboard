@@ -234,20 +234,7 @@ The SQL script contains queries designed to investigate questions such as:
 The Power BI report is included in the repository:
 
 [`Customer_behaviour_dashboard.pbix`](./Customer_behaviour_dashboard.pbix)
-
-Open it with Power BI Desktop to explore the report. Add dashboard screenshots to this README when available so visitors can preview the visuals without opening the PBIX file.
-
-Suggested screenshot location:
-
-```text
-assets/dashboard-overview.png
-```
-
-Then embed it here:
-
-```markdown
-![Customer Shopping Behaviour Dashboard](/assets/dashboard-overview.png)
-```
+(![Customer Shopping Behaviour Dashboard](/assets/dashboard-overview.png))
 
 ## 🧠 Skills Demonstrated
 
