@@ -246,7 +246,7 @@ assets/dashboard-overview.png
 Then embed it here:
 
 ```markdown
-![Customer Shopping Behaviour Dashboard](assets/dashboard-overview.png)
+![Customer Shopping Behaviour Dashboard](/assets/dashboard-overview.png)
 ```
 
 ## 🧠 Skills Demonstrated
